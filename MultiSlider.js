@@ -115,6 +115,7 @@ export default class MultiSlider extends React.Component {
   }
 
   componentWillMount() {
+    console.warn(this.state.positionOne, this.state.positionTwo)
     var customPanResponder = (start, move, end) => {
       return PanResponder.create({
         onStartShouldSetPanResponder: (evt, gestureState) => true,

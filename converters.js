@@ -61,6 +61,9 @@ export function positionToValue(position, valuesArray, sliderLength) {
 }
 
 export function createArray(start, end, step) {
+  if (start === end) {
+    return [start, end]
+  }
   var i;
   var length;
   var direction = start - end > 0 ? -1 : 1;
